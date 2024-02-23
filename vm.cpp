@@ -50,7 +50,7 @@ Operand VM::run() {
             }
             case Instr::Var: {
                 int i = code.at(pc + 1);
-                int var = stack.at(sp - i);
+                int var = stack.at(sp - i - 1);
                 push(var);
                 pc = pc + 2;
                 break;
